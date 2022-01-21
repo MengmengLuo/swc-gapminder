@@ -19,5 +19,11 @@ for filename in sys.argv[1:]:
     ax.set_xticks(range(len(data.index)))
     ax.set_xticklabels(data.index, rotation = 45)
 
-    # display the plot
-    plt.show()
+    # save plot to figs folder. In python change under #display the plot
+    # save the plot with a unique file name
+    # data-python/gapminder_gdp_xxx.csv - input name
+    split_name1 = filename.split('.')[0] #data-python/gapminder_gdp_xxx
+    split_name2 = filename.split('/')[1] #gapminder_gdp_xxx
+    save_name = 'figs/' + split_name2 + '.png'
+    plt.savefig(save_name)
+
