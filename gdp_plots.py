@@ -1,9 +1,10 @@
+import sys
 import pandas
 # we need to import part of matplotlib
 # because we are no longer in a notebook
 import matplotlib.pyplot as plt
 
-filename = 'data-python/gapminder_gdp_oceania.csv'
+filename = sys.argv[1]
 
 # load data and transpose so that country names are
 # the columns and their gdp data becomes the rows
